@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -34,7 +35,7 @@ public class DomNewDocument {
 	}
 	
 
-	public void generateDocument(String file) {
+	public void generateDocument(String file, ArrayList<Object> data) {
 		//PARENT NODE
 		//root node
 		Element products = document.createElement("products");

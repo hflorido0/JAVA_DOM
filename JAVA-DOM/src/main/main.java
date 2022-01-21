@@ -2,6 +2,7 @@ package main;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -18,7 +19,7 @@ public class main {
 
 		//Crating a new xml document
 		DomNewDocument domNewDocument = new DomNewDocument();
-		domNewDocument.generateDocument("files/productos.xml");
+		domNewDocument.generateDocument("files/productos.xml", new ArrayList<>());
 		
 		//reading an existing xml document
 		DomReader domReader = new DomReader("files/productos.xml");
