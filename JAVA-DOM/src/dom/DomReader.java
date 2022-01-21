@@ -17,12 +17,12 @@ import org.xml.sax.helpers.DefaultHandler;
 public class DomReader extends DefaultHandler {
 	Document document;
 	
-	public DomReader() {
+	public DomReader(String fil) {
 		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder;
 			builder = factory.newDocumentBuilder();
-			File file = new File ("files/productos.xml");
+			File file = new File (fil);
 			document = builder.parse(file);
 		} catch (ParserConfigurationException e) {
 			System.out.println("Error parsing the xml");

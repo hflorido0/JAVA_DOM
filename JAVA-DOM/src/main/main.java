@@ -18,10 +18,10 @@ public class main {
 
 		//Crating a new xml document
 		DomNewDocument domNewDocument = new DomNewDocument();
-		domNewDocument.generateDocument();
+		domNewDocument.generateDocument("files/productos.xml");
 		
 		//reading an existing xml document
-		DomReader domReader = new DomReader();
+		DomReader domReader = new DomReader("files/productos.xml");
 		domReader.readDocument();
 	}
 

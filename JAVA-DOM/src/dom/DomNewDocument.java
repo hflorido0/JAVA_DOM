@@ -34,7 +34,7 @@ public class DomNewDocument {
 	}
 	
 
-	public void generateDocument() {
+	public void generateDocument(String file) {
 		//PARENT NODE
 		//root node
 		Element products = document.createElement("products");
@@ -81,18 +81,18 @@ public class DomNewDocument {
 		product.appendChild(stock);
 		
 		
-		generateXml();
+		generateXml(file);
 		
 		//Cnt + shift + F to beautify the xml generated
 	}
 	
-	private void generateXml() {
+	private void generateXml(String fil) {
 		try {			
 			TransformerFactory factory = TransformerFactory.newInstance();
 			Transformer transformer = factory.newTransformer();
 			
 			Source source = new DOMSource(document);
-			File file = new File("files/productos.xml");
+			File file = new File(fil);
 			FileWriter fw = new FileWriter(file);
 			PrintWriter pw = new PrintWriter(fw);
 			Result result = new StreamResult(pw);
